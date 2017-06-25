@@ -59,10 +59,10 @@ public class Temp extends Activity {
 
     // Cognito pool ID. For this app, pool needs to be unauthenticated pool with
     // Amazon Polly permissions.
-    private static final String COGNITO_POOL_ID = "CHANGEME";
+    private static final String COGNITO_POOL_ID = "us-west-2:d9cc50cc-4122-4e2a-98e1-c51fe354cc71";
 
     // Region of Amazon Polly.
-    private static final Regions MY_REGION = Regions.US_EAST_1;
+    private static final Regions MY_REGION = Regions.US_WEST_2;
 
     CognitoCachingCredentialsProvider credentialsProvider;
 

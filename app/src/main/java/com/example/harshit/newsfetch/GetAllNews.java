@@ -12,8 +12,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 
-import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -40,27 +38,27 @@ public class GetAllNews extends AppCompatActivity {
             @Override
             public void onResponse(JSONObject response) {
                 Log.d("Harshit",response.toString());
-                NewsList.clear();
-                try{
-                    if (response.length()>0){
-                        JSONArray jsonArray=response.getJSONArray("result");
-                        for(int i=0;i<jsonArray.length();i++){
-                            JSONObject jsonObject=jsonArray.getJSONObject(i);
-                            Log.d("Harshit",jsonObject.getString("name").toString());
-                            News News=new News();
-                            if (!jsonObject.isNull("name")) {
-                                News.name=jsonObject.getString("name");
-                                News.designation=jsonObject.getString("desg");
-                                News.salary=jsonObject.getString("salary");
-                            }
-                            NewsList.add(News);
-                            Log.d("Harshit","reached here");
-                        }
-                        NewsAdapter.notifyDataSetChanged();
-                    }
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
+//                NewsList.clear();
+//                try{
+//                    if (response.length()>0){
+//                        JSONArray jsonArray=response.getJSONArray("result");
+//                        for(int i=0;i<jsonArray.length();i++){
+//                            JSONObject jsonObject=jsonArray.getJSONObject(i);
+//                            Log.d("Harshit",jsonObject.getString("name").toString());
+//                            News News=new News();
+//                            if (!jsonObject.isNull("name")) {
+//                                News.name=jsonObject.getString("name");
+//                                News.designation=jsonObject.getString("desg");
+//                                News.salary=jsonObject.getString("salary");
+//                            }
+//                            NewsList.add(News);
+//                            Log.d("Harshit","reached here");
+//                        }
+//                        NewsAdapter.notifyDataSetChanged();
+//                    }
+//                } catch (JSONException e) {
+//                    e.printStackTrace();
+//                }
             }
         }, new Response.ErrorListener() {
             @Override

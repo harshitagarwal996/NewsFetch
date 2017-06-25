@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
     public void fetchNews(View view){
-        Intent intent=new Intent(this,GetAllNews.class);
+        Intent intent=new Intent(this,Temp.class);
         startActivity(intent);
     }
 }
