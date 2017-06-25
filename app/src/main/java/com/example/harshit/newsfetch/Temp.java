@@ -154,7 +154,7 @@ public class Temp extends Activity {
                 return;
             }
 
-            voicesSpinner.setAdapter(new SpinnerVoiceAdapter(MainActivity.this, voices));
+            voicesSpinner.setAdapter(new SpinnerVoiceAdapter(Temp.this, voices));
 
             findViewById(R.id.voicesProgressBar).setVisibility(View.INVISIBLE);
             voicesSpinner.setVisibility(View.VISIBLE);
@@ -191,7 +191,7 @@ public class Temp extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_temp);
 
         initPollyClient();
 
